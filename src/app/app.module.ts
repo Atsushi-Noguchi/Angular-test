@@ -3,10 +3,12 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { SimpleformComponent } from './simpleform/simpleform.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    SimpleformComponent
   ],
   imports: [
     BrowserModule,
