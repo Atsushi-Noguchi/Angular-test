@@ -1,3 +1,16 @@
-<input [(ngModel)]="text1" />+<input [(ngModel)]="text2" />
-<button (click)="addAndShow()">culc</button>
-<div>{{ result }}</div>
+<form #calcForm="ngForm">
+  <input [(ngModel)]="text1" name="feildOne" required #feildOne="ngModel" />
+  +
+  <input [(ngModel)]="text2" name="feildTwo" required #feildTwo="ngModel" />
+
+  <button (click)="addAndShow()" [disabled]="calcForm.invalid">culc</button>
+  <div>{{ result }}</div>
+  <div>
+    <span *ngIf="feildOne.invalid" class="my-invalid"
+      >左側のフィールドが空白です</span
+    ><br />
+    <span *ngIf="feildTwo.invalid" class="my-invalid"
+      >右側のフィールドが空白です</span
+    >
+  </div>
+</form>
