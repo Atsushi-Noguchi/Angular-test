@@ -1,0 +1,7 @@
+<form [formGroup]="calcForm">
+  <input formControlName="fieldOne" />
+  +
+  <input formControlName="fieldTwo" />
+  <button (click)="addAnyway()">calc</button>
+</form>
+<div>{{ result }}</div>
